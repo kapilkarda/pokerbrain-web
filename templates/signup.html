@@ -1,0 +1,58 @@
+<ion-view>
+	<ion-content class="mainBody background_white">
+		<div class="card no_background logo">
+			<img src="img/BetterBrain.png" class="" />
+		</div>
+		<div class="card list no_background">
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:8px 8px 0px 0px;">
+			<i class="icon login-icon text_color ion-ios-person-outline placeholder-icon"></i>
+			<input type="text" class="text_color" ng-model="Signform.username" placeholder="User Name">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px;">
+			<i class="icon login-icon text_color ion-ios-email-outline placeholder-icon"></i>
+			<input type="text" class="text_color" ng-model="Signform.email" placeholder="Email">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px;">
+			<i class="icon login-icon text_color ion-ios-locked-outline placeholder-icon"></i>
+			<input type="password" class="text_color" ng-model="Signform.password" placeholder="Password">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px;">
+			<i class="icon login-icon text_color ion-ios-locked-outline placeholder-icon"></i>
+			<input type="password" class="text_color" ng-model="Signform.Cpassword" placeholder="Confirm Password">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px;">
+			<i class="icon login-icon text_color ion-ios-calendar-outline placeholder-icon"></i>
+			<input placeholder="Date of Birth " class="text_color" ng-model="Signform.dob" type="text" onfocus="(this.type='date')"  id="date">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px;padding-left: 5px !important;" ng-click="openModalselectnation()" >
+		  	<a class="button text_color icon-left ion-ios-flag-outline button-clear button-dark placeholder-icon" >{{Signform.nationality}}</a>
+		  </label>
+			<div class="row no_background border_color" style="border-radius:0px 0px 8px 8px;">
+				<div class="col no_background no_padding text_color col-50" style="line-height:36px; padding-left:10px !important;">
+					Gender
+				</div>
+				<div class="col no_background no_padding col-50 text-right" style="padding-top: 4px !important; height: 36px;">
+					<label ng-click="changeGender(Signform.gender)" class="no_background">
+						<input type="text" readonly style="opacity:0; position:absolute;" ng-model="Signform.gender" />
+						<img ng-if="Signform.gender=='male'" src="img/male.png" style="width:60px;" />
+						<img ng-if="Signform.gender=='female'" src="img/female.png" style="width:60px;" />
+					</label>
+				</div>
+			</div>
+			<button ng-click="DoSignUp()" class="button button-full button_color" style="border-radius:8px 8px 8px 8px;" >
+			  Signup
+			</button>
+			<button ui-sref="login" class="button button-full button-outline text_color border_color" style="border-radius:8px 8px 8px 8px;" >
+			  Login
+			</button>
+			<label class="item padding5 no_background text-center text_color">
+				<b>OR</b>
+			</label>
+			<button ng-click="facebookLogin()" class="button button-full facebook_color" style="border-radius:8px 8px 8px 8px;" >
+				<i class="icon ion-social-facebook"></i>&nbsp; &nbsp; Login With Facebook
+			</button>
+			<br />
+			<br />
+		</div>
+	</ion-content>
+</ion-view>	

@@ -1,0 +1,39 @@
+<ion-view>
+	<ion-content class="mainBody background_white">
+		<div class="card no_background logo">
+			<img src="img/BetterBrain.png" class="" />
+		</div>
+		<div class="card list no_background">
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:8px 8px 0px 0px;">
+			<i class="icon login-icon text_color ion-ios-person-outline placeholder-icon"></i>
+			<input type="text" class="text_color" ng-model="loginform.email" placeholder="E-mail">
+		  </label>
+		  <label class="item padding5 paddingLR10 no_background item-input text_color border_color" style="border-radius:0px 0px 8px 8px;">
+			<i class="icon login-icon text_color ion-ios-locked-outline placeholder-icon"></i>
+			<input type="password" class="text_color" ng-model="loginform.password" placeholder="Password">
+		  </label>
+			<div class="row no_margin">
+				<div class="col col-50 no_padding no_margin text-left">
+					<!--<label class="text_color"><input type="checkbox" ng-model="loginform.remamber">Remamber Me</label>-->
+				</div>
+				<div class="col col-50 no_padding no_margin text-right">
+					<label class="text_color">Forgot Password?</label>
+				</div>
+			</div>
+			<button ng-click="DoLogin()" class="button button-full button_color" style="border-radius:8px 8px 8px 8px;" >
+			  Login
+			</button>
+			<button ui-sref="signup" class="button button-full button-outline text_color border_color" style="border-radius:8px 8px 8px 8px;" >
+			  Signup New User
+			</button>
+			<label class="item padding5 no_background text-center text_color">
+				<b>OR</b>
+			</label>
+			<button ng-click="facebookLogin('1')" class="button button-full facebook_color" style="border-radius:8px 8px 8px 8px;" >
+				<i class="icon ion-social-facebook"></i>&nbsp; &nbsp; Login With Facebook
+			</button>
+			<br />
+			<br />
+		</div>
+	</ion-content>
+</ion-view>	

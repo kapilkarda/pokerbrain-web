@@ -1,0 +1,37 @@
+<ion-view view-title="Topics">
+	<!-- <ion-header class="bar header-bar background_color">
+		<button onclick="javascript:history.go(-1)" class="button button-clear icon ion-arrow-left-c text_white"></button>
+		<h1 class="title"></h1>
+	</ion-header> -->
+	<ion-content overflow-scroll="true" scroll="true" style="background:#eaedf2 !important;">
+		<div class="card no_margin text-center background_color padding10">
+			<p class="no_margin"><i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;</p>
+			<h2 class="font_normal profile-title">Aria S</h2>
+			<div class="game-fram">
+				<div class="player1-profile" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;">
+				</div>
+				<div class="game-mainbox">
+					<p class="" style="padding-top:35px !important;"><img src="img/card1.png" style="width:13%; margin:2%;"/><img src="img/card1.png" style="width:13%; margin:2%;"/><img src="img/blanckcard.png" style="width:13%; margin:2%;"/><img src="img/blanckcard.png" style="width:13%; margin:2%;"/><img src="img/blanckcard.png" style="width:13%; margin:2%;"/></p>
+				</div>
+				<div class="player2-profile" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;">
+				</div>
+			</div>
+			<h2 class="font_normal profile-title">Aria S</h2>
+			<p class="no_margin"><i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i></p>
+		</div>
+		<div class="card">
+			<div class="item text-center text_color item-text-wrap">	
+				<br />
+				<span class="font_bold text_color fs-20">COLLECT A FULL-HOUSE FROM GIVEN CARD DECK</span>
+				<br /><span class="font_normal text_gray fs-12">(SWIPE TO SEE THE FULL DECK AND SELECT AS FAST AS YOU CAN)</span>
+			</div>
+		</div>
+		<ion-scroll  direction="x" class="item wide-item no_background" style="height:165px !important; padding:0px !important;padding:3px !important;" >
+			<div collection-repeat="card in cards" collection-item-height="'100%'" collection-item-width="'120px'">
+				<div style="background:url('{{card.image}}') no-repeat center !important; background-size:cover !important; width:95%; height:95%; position:relative; margin:0 5% !important; text-align:center;">
+				</div>
+			</div>
+		</ion-scroll>
+		<br /><br />
+	</ion-content>
+</ion-view>

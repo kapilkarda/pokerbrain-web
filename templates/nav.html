@@ -1,0 +1,53 @@
+<ion-side-menus>
+	<ion-side-menu-content edge-drag-threshold="false" drag-content="false">
+		<ion-nav-bar class="background_color text_white col3">
+			<ion-nav-back-button>
+			</ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button menu-toggle="left"  class="button text_green button-icon icon ion-navicon"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right" style="top:0 !important;right:0 !important;bottom:0 !important;">
+				<button class="icon_bg button button-clear text_green button-icon ion-gear-b" ></button>
+			</ion-nav-buttons>
+			<ion-nav-title></ion-nav-title>
+		</ion-nav-bar>
+		<ion-nav-view name="nav"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-content class="background_color" has-header="false">
+			<div class="card no_background">
+				<div class="profilepic" style="background:url('{{ProfilePic}}') no-repeat center; background-size:110% !important;position: relative !important;">
+					<!-- <i ng-click="changePicture()" class="icon ion-edit editPencil" ></i> -->
+				</div>
+				<h3 class="text-center text_white font_normal">{{userName}}</h3>
+			</div>
+			<div class="list no_background">
+				<a class="item no_background border_bottom font_light text_white fs-20 lineheight40" href="javascript:void(0);" nav-clear menu-close ui-sref="singleprereadyans">
+					<img src="img/play.png" style="width:30px; margin-right:10px;" align="left" />
+					Play
+				</a>
+				<a class="item no_background border_bottom font_light text_white fs-20 lineheight40" href="javascript:void(0);" nav-clear menu-close ui-sref="nav.home">
+					<img src="img/topics.png" style="width:30px; margin-right:10px;" align="left" />
+					Games
+				</a>
+				<a class="item no_background border_bottom font_light text_white fs-20 lineheight40" href="javascript:void(0);" nav-clear menu-close ui-sref="nav.leaderboard">
+					<img src="img/leaderboard.png" style="width:30px; margin-right:10px;" align="left" />
+					Leaderboard
+				</a>
+				<a class="item no_background border_bottom font_light text_white fs-20 lineheight40" href="javascript:void(0);" nav-clear menu-close ui-sref="nav.myscore">
+					<img src="img/myscore.png" style="width:30px; margin-right:10px;" align="left" />
+					My Statistics
+				</a>
+				<a class="item no_background border_bottom font_light text_white fs-20 lineheight40" href="javascript:void(0);" nav-clear menu-close ui-sref="nav.support">
+					<img src="img/support.png" style="width:30px; margin-right:10px;" align="left" />
+					support
+				</a>
+			</div>	
+			
+			<div ng-click="logout()" class="card no_background no_margin text-center">
+				<img src="img/logout.png" style="width:100px !important; margin:0 auto !important;" />
+			</div>
+			<br />
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

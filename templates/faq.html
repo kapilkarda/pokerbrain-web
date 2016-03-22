@@ -1,0 +1,21 @@
+<ion-modal-view>
+	<ion-header-bar class="background_color text_white">
+      <h1 class="title text_white">Faq</h1>
+	  <button ng-click="closeModalfaq()" class="button button-clear icon ion-close"></button>
+    </ion-header-bar>
+	<ion-content style="background:#eaedf2 !important;">
+		<ion-list>
+			<div ng-repeat="faq in faqs track by $index">
+			<ion-item class="item-stable"
+						ng-click="toggleGroup(faq)"
+						ng-class="{active: isGroupShown(faq)}">
+				  <i class="icon" ng-class="isGroupShown(faq) ? 'ion-minus' : 'ion-plus'"></i>
+				&nbsp;
+				{{faq.ques}}
+			  </ion-item>
+			  <ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown(faq)">
+				{{faq.ans}}
+			  </ion-item>
+      </ion-list>
+	</ion-content>
+</ion-modal-view>

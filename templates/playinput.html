@@ -1,0 +1,97 @@
+<ion-view view-title="">
+	<!-- <ion-header class="bar header-bar background_color">
+		<button onclick="javascript:history.go(-1)" class="button button-clear icon ion-arrow-left-c text_white"></button>
+		<h1 class="title"></h1>
+	</ion-header> -->
+
+	<ion-content overflow-scroll="true" scroll="true" style="background:#eaedf2 !important;">
+		<div class="row no_padding">
+			<div class="col no_padding col1">
+				<div class="row background_color">
+					<div class="col col-50">
+						<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;">
+						</div>
+						<h2 class="font_normal no_margin profile-title" style="margin-top:5px !important;">Aria S</h2>
+						<p class="font_light no_margin profile-dis">6 out of 10</p>
+						<br />
+						<p class="no_margin"><i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i></p>
+					</div>
+					<div class="col col-50 text-right">
+						<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; float:right !important; background-size:110%; margin:0 12px 0 0 !important;">
+						</div>
+						<h2 class="font_normal no_margin profile-title" style="margin-right:70px !important; margin-top:5px !important;">Aria S</h2>
+						<p class="font_light no_margin profile-dis" style="margin-right:70px !important;">6 out of 10</p>
+						<br />
+						<p class="no_margin"><i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;</p>
+					</div>
+					<center>
+						<div class="centerNumber">
+							7
+						</div>
+					</center>
+				</div>
+				<br />
+				<div class="card">
+					<br /><br />
+					<div class="item text-center fs-20 text_color font_bold item-text-wrap">	
+						<div class="color_red ques-icon"><img src="img/game1.png" style="width:100%;"></div>
+						<br />
+						DOUBLE TWO PAIR COMBINATION HAS A SPECIAL NAME. WHAT IS IT?
+					</div>
+					<br /><br />
+				</div>
+				<div class="card list br" style="">
+					<label class="item item-input" style="padding:15px !important;">
+						<input type="text" class="fs-20" placeholder="Type your answer here">
+						<i class="icon ion-mic-a placeholder-icon fs-30" style="right:20px !important;"></i>
+					</label>
+				</div>
+				<br /><br />
+			</div>
+			<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				
+			</div>
+		</div>
+	</ion-content>
+
+	<!-- <ion-content overflow-scroll="true" scroll="true" style="background:#eaedf2 !important;">
+		<div class="row background_color">
+			<div class="col col-50">
+				<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;">
+				</div>
+				<h2 class="font_normal no_margin profile-title" style="margin-top:5px !important;">Aria S</h2>
+				<p class="font_light no_margin profile-dis">6 out of 10</p>
+				<br />
+				<p class="no_margin"><i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i></p>
+			</div>
+			<div class="col col-50 text-right">
+				<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; float:right !important; background-size:110%; margin:0 12px 0 0 !important;">
+				</div>
+				<h2 class="font_normal no_margin profile-title" style="margin-right:70px !important; margin-top:5px !important;">Aria S</h2>
+				<p class="font_light no_margin profile-dis" style="margin-right:70px !important;">6 out of 10</p>
+				<br />
+				<p class="no_margin"><i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;</p>
+			</div>
+			<div class="centerNumber">
+				7
+			</div>
+		</div>
+		<br />
+		<div class="card">
+			<br /><br />
+			<div class="item text-center fs-20 text_color font_bold item-text-wrap">	
+				<div class="color_red ques-icon"><img src="img/game1.png" style="width:100%;"></div>
+				<br />
+				DOUBLE TWO PAIR COMBINATION HAS A SPECIAL NAME. WHAT IS IT?
+			</div>
+			<br /><br />
+		</div>
+		<div class="card list br" style="">
+			<label class="item item-input" style="padding:15px !important;">
+				<input type="text" class="fs-20" placeholder="Type your answer here">
+				<i class="icon ion-mic-a placeholder-icon fs-30" style="right:20px !important;"></i>
+			</label>
+		</div>
+		<br /><br />
+	</ion-content> -->
+</ion-view>

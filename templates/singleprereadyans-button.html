@@ -1,0 +1,64 @@
+<ion-view view-title="Topics">
+	<!-- <ion-header class="bar header-bar background_color">
+		<button onclick="javascript:history.go(-1)" class="button button-clear icon ion-arrow-left-c text_white"></button>
+		<h1 class="title"></h1>
+	</ion-header> -->
+	<ion-content overflow-scroll="true" scroll="true" style="background:#eaedf2 !important;">
+		<div class="card no_margin text-center background_color padding10">
+			<div class="game-fram">
+				<button ng-click="showfunction('6')" class="player1-profile" style="background:url('img/{{Userpic[6].pic}}') no-repeat center; background-size:110%; left:2% !important; top:16% !important;">
+				</button>
+				<button ng-click="showfunction('5')" class="player1-profile" style="background:url('img/{{Userpic[5].pic}}') no-repeat center; background-size:110%; left:30% !important; top:0% !important;">
+				</button>
+				<button ng-click="showfunction('4')" class="player1-profile" style="background:url('img/{{Userpic[4].pic}}') no-repeat center; background-size:110%; left:60% !important; top:0% !important;">
+				</button>
+				<button ng-click="showfunction('3')" class="player1-profile" style="background:url('img/{{Userpic[3].pic}}') no-repeat center; background-size:110%; left:84% !important; top:16% !important;">
+				</button>
+				<div class="game-mainbox">
+					<p class="" style="padding-top:50px !important;">
+						<img src="img/tablecoin.png" style="width:13%; margin:2%;"/>
+					</p>
+					<img src="img/tablecoin-red.png" style="width:5%; position:absolute;" ng-style="redcoin" />
+					<img src="img/tablecoin-yellw.png" style="width:5%; position:absolute;" ng-style="yellwcoin" />
+					<img src="img/tableuser.png" style="width:5%; position:absolute;" ng-style="usercoin" />
+				</div>
+				<button ng-click="showfunction('8')" class="player2-profile" style="background:url('img/{{Userpic[8].pic}}') no-repeat center; background-size:110%; left:20% !important; top:75% !important;"></button>
+				<button ng-click="showfunction('7')" class="player2-profile" style="background:url('img/{{Userpic[7].pic}}') no-repeat center; background-size:110%; left:0% !important; top:55% !important;"></button>
+				<button ng-click="showfunction('0')" class="player2-profile" style="background:url('img/{{Userpic[0].pic}}') no-repeat center; background-size:110%;"></button>
+				<button ng-click="showfunction('1')" class="player2-profile" style="background:url('img/{{Userpic[1].pic}}') no-repeat center; background-size:110%; left:70% !important; top:75% !important;"></button>
+				<button ng-click="showfunction('2')" class="player2-profile" style="background:url('img/{{Userpic[2].pic}}') no-repeat center; background-size:110%; left:87% !important; top:55% !important;"></button>
+				
+			</div>
+			<p class="no_margin text-center fs-16 text_white">&nbsp;&nbsp;{{playerdetails.name}}</p>
+		</div>
+		<div ng-show="show==$index" ng-repeat="question in questions track by $index">	
+			<div class="card no_background" style="margin:20px auto 0px !important;">
+				<p class="text-center"><img ng-src="img/cards/{{question.card1}}.png" style="width:30%; margin:2%;"/><img ng-src="img/cards/{{question.card2}}.png" style="width:30%; margin:2%;"/></p>
+			</div>
+		<div class="card" style="margin:0px auto !important;">
+			<div class="item text-center fs-20 text_color font_bold item-text-wrap">	
+				You have {{question.stacksizebb}} big blinds.{{question.question}}
+			</div>
+		</div>
+		<div class="card no_background">
+			<div class="row no_background" style="margin-bottom:20px;">
+				<button ng-if="question.opt1!=''" ng-click="checkans(question.opt1, question.right_answer, '1', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB30 marginright20 text-center font_normal" ng-class="class1">
+					{{question.opt1}}
+				</button>
+				<button ng-if="question.opt2!=''" ng-click="checkans(question.opt2, question.right_answer, '2', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB30 marginleft20 text-center font_normal" ng-class="class2" style="max-width:46%;">
+					{{question.opt2}}
+				</button>
+			</div>
+			<div class="row no_background">
+				<button ng-if="question.opt3!=''" ng-click="checkans(question.opt3, question.right_answer, '3', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB30 marginright20 text-center font_normal" ng-class="class3">
+					{{question.opt3}}
+				</button>
+				<button ng-if="question.opt4!=''" ng-click="checkans(question.opt4, question.right_answer, '4', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 background_white text_color paddingTB30 marginleft20 text-center font_normal" ng-class="class4" style="max-width:46%;">
+					{{question.opt4}}
+				</button>
+			</div>
+		</div>
+		</div>
+		<br /><br />
+	</ion-content>
+</ion-view>

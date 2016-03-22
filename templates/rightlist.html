@@ -1,0 +1,44 @@
+<div class="list">
+	<a class="item item-thumbnail-left tumblingImg no_border">
+      <img src="img/play.png" class="tumblingImg1">
+      <h2 class="tumlingColor">888 Poker</h2>
+    </a>
+    <div class="item item-body no_margin no_padding no_border" style="top: -6px !important;">
+	    <p class="no_margin padding5" style="font-weight: bold !important;">
+	      Thr world’s second largest online poker site and one that is dedicated to reccreational playes.
+	    </p>
+	</div>
+	<div class="row no_padding">
+		<div class="col col-50 no_padding">
+			<button class="button button-light">BOUNS: 
+				<a style="color: #333 !important;font-weight: bold !important;">Free $88</a>
+			</button>
+		</div>
+		<div class="col col-50 no_padding">
+			<button class="button icon-left ion-ios-download button-positive">FREE DOWNLOAD</button>
+		</div>
+	</div>
+</div>
+<div class="list no_margin item " ng-repeat="sidelist in sidelists">
+	<div class="row no_padding" style="line-height: 55px !important;">
+		<div class="col col-50 no_padding">
+			<a class="item item-thumbnail-left tumblingImg no_border">
+		      <img src="{{sidelist.img}}" class="tumblingImg1">
+		      <h2 class="tumlingColor">{{sidelist.name}}</h2>
+		    </a>
+		</div>
+		<div class="col col-50 no_padding">
+			<div class="row no_padding">
+				<div class="col col-50 no_padding">
+					<span style="font-weight: bold !important;">
+						<span>$ {{sidelist.price}}</span> &nbsp; <i style="margin-top: 5px !important;" class="fs-20 tumlingColor ion-ios-information"></i>
+					</span>
+				</div>
+				<div class="col col-50 no_padding item-icon-right text_gray">
+					<i class="icon ion-ios-download" style="margin-top: -5px !important;"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+				

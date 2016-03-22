@@ -1,0 +1,15 @@
+<ion-modal-view>
+	<ion-header class="bar bar-header background_color">
+		<button ng-click="closeModalselectnation()" class="button button-clear text_white icon ion-chevron-left text_black"></button>
+		<h2 class="title text_white">Country List</h2>
+	</ion-header>
+	<ion-content class="mainBody" style="background:white; background-size:cover;top:44px !important;">
+		<div class="list">
+			<div ng-repeat="count in counrty_list" class="item" ng-click="closeModalselectnation(count.name);" >
+				<img ng-src="{{count.image}}" style="text-align:left; position:absolute; right:15px; top:15px; width:50px;">
+				<h4>{{count.name}}</h4>
+
+			</div>
+		</div>	
+	</ion-content>
+</ion-modal-view>

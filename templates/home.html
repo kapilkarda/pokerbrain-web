@@ -1,0 +1,144 @@
+<ion-view view-title="Topics">
+	<ion-content scroll="false">
+		<div class="row no_padding">
+			<div class="col no_padding col1">
+				<ion-content scroll="false" class="has_header col1">
+					<tab-slide-box>
+						<div class="tsb-icons">
+							<div class="tsb-ic-wrp font_light">
+								<ion-scroll direction="x" class="tsb-hscroll">
+								<a href="javascript:;" class="font_light">GAMES</a>
+								<a href="javascript:;" class="font_light">LAST PLAYED</a>
+								<a href="javascript:;" class="font_light">PLAYED</a>
+								</ion-scroll>
+							</div>
+						</div>
+						<ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+						<ion-slide>
+							<ion-scroll direction="y" style="height:90% !important;">
+							<div class="card no_background">
+							<ion-list>
+									<div ng-repeat="last in lastplayed">
+										<ion-item class="item-stable item-icon-right marginT10 br" ng-click="toggleGroup(last)" ng-class="{active: isGroupShown(last)}">
+											<div class="game-icon" ng-class="colorthem($index)">
+												<img ng-src="img/game1.png" style="width:100%;">
+											</div>
+											<h2 class="font_normal fs-16 game-title">{{last.title}}</h2>
+											<i class="icon ion-android-favorite " ng-class="isfav(last.favstatus) ? 'text_red' : 'text_gray'"></i>
+										</ion-item>
+										<div class="marginLR10 paddingTB5 background_white br-B-LR" ng-hide="isGroupShown(last)">
+										</div>
+										<ion-item class="item-accordion item-text-wrap background_none marginLR10 no_padding br-B-LR" ng-show="isGroupShown(last)" style="box-shadow:none !important; top:-2px !important;">
+											<div class="card no_margin text-center padding20" ng-class="colorthem($index)">
+												<img src="img/game1.png" style="width:50px; margin:0 auto !important;" />
+												<h4 class="text_white fs-16">{{last.title}}</h4>
+												<p class="text_white fs-12">{{last.question_coun}} questions completed out of {{last.questions}}</p>
+											</div>
+											<div class="card row no_margin text-center padding20">
+												<div class="col col-33 text-center" ui-sref="nav.leaderboard" >
+													<img src="img/leaderboardstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Leaderboard</h4>
+												</div>
+												<div class="col col-33 text-center">
+													<img src="img/friendsstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Challenge a friend</h4>
+												</div>
+												<div ng-click="gotogame($index)" class="col col-33 text-center">
+													<img src="img/playstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Play !</h4>
+												</div>
+											</div>
+										</ion-item>
+									</div>
+							</ion-list>
+							</div>
+							<br /><br />
+							</ion-scroll>
+						</ion-slide>
+						<ion-slide>
+							<ion-scroll direction="y" style="height:90% !important;">
+							<div class="card no_background">
+							<ion-list>
+									<div ng-repeat="last in lastplayed">
+										<ion-item class="item-stable item-icon-right marginT10 br" ng-click="toggleGroup(last)" ng-class="{active: isGroupShown(last)}">
+											<div class="game-icon" ng-class="colorthem($index)"><img ng-src="img/game1.png" style="width:100%;"></div>
+											<h2 class="font_normal fs-16 game-title">{{last.title}}</h2>
+											<i class="icon ion-android-favorite " ng-class="isfav(last.favstatus) ? 'text_red' : 'text_gray'"></i>
+										</ion-item>
+										<div class="marginLR10 paddingTB5 background_white br-B-LR" ng-hide="isGroupShown(last)">
+										</div>
+										<ion-item class="item-accordion item-text-wrap background_none marginLR10 no_padding br-B-LR" ng-show="isGroupShown(last)" style="box-shadow:none !important; top:-2px !important;">
+											<div class="card no_margin text-center padding20" ng-class="colorthem($index)">
+												<img src="img/game1.png" style="width:50px; margin:0 auto !important;" />
+												<h4 class="text_white fs-16">{{last.title}}</h4>
+												<p class="text_white fs-12">{{last.question_coun}} questions completed out of {{last.questions}}</p>
+											</div>
+											<div class="card row no_margin text-center padding20">
+												<div class="col col-33 text-center" ui-sref="nav.leaderboard">
+													<img src="img/leaderboardstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Leaderboard</h4>
+												</div>
+												<div class="col col-33 text-center">
+													<img src="img/friendsstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Challenge a friend</h4>
+												</div>
+												<div ng-click="gotogame($index)" class="col col-33 text-center">
+													<img src="img/playstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Play !</h4>
+												</div>
+											</div>
+										</ion-item>
+									</div>
+							</ion-list>
+							</div>
+							<br />
+							</ion-scroll>
+						</ion-slide>
+						<ion-slide>
+							<ion-scroll direction="y" style="height:90% !important;">
+							<div class="card no_background">
+							<ion-list>
+									<div ng-repeat="last in lastplayed">
+										<ion-item class="item-stable item-icon-right marginT10 br" ng-click="toggleGroup(last)" ng-class="{active: isGroupShown(last)}">
+											<div class="game-icon" ng-class="colorthem($index)"><img ng-src="img/game1.png" style="width:100%;"></div>
+											<h2 class="font_normal fs-16 game-title">{{last.title}}</h2>
+											<i class="icon ion-android-favorite " ng-class="isfav(last.favstatus) ? 'text_red' : 'text_gray'"></i>
+										</ion-item>
+										<div class="marginLR10 paddingTB5 background_white br-B-LR" ng-hide="isGroupShown(last)">
+										</div>
+										<ion-item class="item-accordion item-text-wrap background_none marginLR10 no_padding br-B-LR" ng-show="isGroupShown(last)" style="box-shadow:none !important; top:-2px !important;">
+											<div class="card no_margin text-center padding20" ng-class="colorthem($index)">
+												<img src="img/game1.png" style="width:50px; margin:0 auto !important;" />
+												<h4 class="text_white fs-16">{{last.title}}</h4>
+												<p class="text_white fs-12">{{last.question_coun}} questions completed out of {{last.questions}}</p>
+											</div>
+											<div class="card row no_margin text-center padding20">
+												<div class="col col-33 text-center" ui-sref="nav.leaderboard">
+													<img src="img/leaderboardstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Leaderboard</h4>
+												</div>
+												<div class="col col-33 text-center">
+													<img src="img/friendsstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Challenge a friend</h4>
+												</div>
+												<div ng-click="gotogame($index)" class="col col-33 text-center">
+													<img src="img/playstatus.png" style="width:80%;" />
+													<h4 class="text-center text_color fs-14">Play !</h4>
+												</div>
+											</div>
+										</ion-item>
+									</div>
+							</ion-list>
+							</div>
+							<br />
+							</ion-scroll>
+						</ion-slide>
+					</ion-slide-box>
+			        </tab-slide-box>
+				</ion-content>
+			</div>
+			
+				<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				</div>
+	</ion-content>
+</ion-view>

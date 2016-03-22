@@ -1,0 +1,81 @@
+<!-- <ion-view view-title="My Score">
+	<ion-content scroll="false">
+		<div class="list card">
+			<a class="item text-center item-text-wrap background_gray">
+				<h3 class="color_dark">Your Score</h3>
+				<h1 class="color_green text_white">{{myScore}}</h1>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>
+ -->
+
+ <ion-view view-title="My Statistics">
+ 	<ion-content scroll="false">
+		<div class="row no_padding">
+			<div class="col no_padding col1">
+				<ion-content scroll="false" class="has_header col1">
+				<ion-scroll ng-hide="allshow" direction="y" style="height:90% !important;">
+					<div class="list background_color no_margin">
+			       <canvas id="chartData" tc-chartjs-doughnut chart-options="options" chart-data="data"></canvas>
+					<br />
+				 </div>
+
+				 <div ng-repeat="posData in dataShowOnApp" class="row no_padding" style="border-bottom:1px solid #cacfd7 !important;">
+				 	<div class="col col-50 no_padding">
+				 	  <a class="item no_background">
+					    <span class="fs-16 text_color">{{posData.name}}</span>
+
+					    <span class="badge text_white" ng-class="calculateClass(posData.right, posData.wrong)" style="padding: 6px 10px 6px 10px !important;margin-top: -3px !Important;margin-right: 10% !Important">{{posData.right/(posData.wrong + posData.right) | percentage:0}}</span>
+
+					  </a>
+				 	</div>
+				 	<div class="col col-50 no_padding">
+				 	<a class="item no_background">
+				 		<span class="item-note">
+				 			<span class="fs-14" style="color:#333;">{{posData.right}}
+				 			</span>
+				 			out of
+				 			<span class="fs-14" style="color:#333;">{{posData.wrong + posData.right}}
+				 			</span>
+				 		</span>
+				 	</a>
+				 	</div>
+				 </div>	
+				 </ion-content>
+			</div>
+			<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				
+			</div>
+	</ion-content>
+
+
+	<!-- <ion-content overflow-scroll="true" style="background:#fff !important;">
+		<div class="list background_color no_margin">
+	       <canvas id="chartData" tc-chartjs-doughnut chart-options="options" chart-data="data"></canvas>
+			<br />
+		 </div>
+
+		 <div ng-repeat="posData in dataShowOnApp" class="row no_padding" style="border-bottom:1px solid #cacfd7 !important;">
+		 	<div class="col col-50 no_padding">
+		 	  <a class="item no_background">
+			    <span class="fs-16 text_color">{{posData.name}}</span>
+
+			    <span class="badge text_white" ng-class="calculateClass(posData.right, posData.wrong)" style="padding: 6px 10px 6px 10px !important;margin-top: -3px !Important;margin-right: 10% !Important">{{posData.right/(posData.wrong + posData.right) | percentage:0}}</span>
+
+			  </a>
+		 	</div>
+		 	<div class="col col-50 no_padding">
+		 	<a class="item no_background">
+		 		<span class="item-note">
+		 			<span class="fs-14" style="color:#333;">{{posData.right}}
+		 			</span>
+		 			out of
+		 			<span class="fs-14" style="color:#333;">{{posData.wrong + posData.right}}
+		 			</span>
+		 		</span>
+		 	</a>
+		 	</div>
+		 </div>
+	</ion-content> -->
+</ion-view>

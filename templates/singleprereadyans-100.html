@@ -1,0 +1,48 @@
+<ion-view view-title="Topics">
+	<!-- <ion-header class="bar header-bar background_color">
+		<button onclick="javascript:history.go(-1)" class="button button-clear icon ion-arrow-left-c text_white"></button>
+		<h1 class="title"></h1>
+	</ion-header> -->
+	<ion-content style="background:#eaedf2 !important;">
+		<div ng-show="show==$index" class="height100" ng-style="animation" ng-repeat="question in questions track by $index">
+			<div class="height30 card no_margin text-center background_color padding10">
+				<div style="position:relative;">
+					<div ng-repeat="Userpic in Userpics track by $index" ng-if="Userpic.id==question.position" class="">
+						<img ng-src="img/position/{{Userpic.pic}}" style="width:70%;" />
+					</div>
+					<img class="player2-profile" src="img/{{playerdetails.pic}}" style="width:9%;"></button>
+				</div>
+				<p class="no_margin text-center fs-16 text_white">&nbsp;&nbsp;{{playerdetails.name}}</p>
+			</div>
+			<div class="height70">	
+				<div class="card no_background height40" style="margin:0px !important; padding:5%;">
+					<p class="text-center"><img ng-src="img/cards/{{question.card1}}.png" style="width:30%; max-height:130px; margin:2%;"/><img ng-src="img/cards/{{question.card2}}.png" style="width:30%; max-height:130px; margin:2%;"/></p>
+				</div>
+				<div class="card height35" style="margin:0px auto !important;">
+					<div class="item text-center fs-18 text_color font_bold item-text-wrap" style="padding:10% 5%;">	
+						You have {{question.stacksizebb}} big blinds.{{question.question}}
+					</div>
+				</div>
+				<div class="card no_background no_margin height20" style="margin-bottom:0px !important;">
+					<div class="row no_background" style="padding:5%;">
+						<button ng-if="question.opt1!=''" ng-click="checkans(question.opt1, question.right_answer, '1', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB20 text-center font_normal" ng-class="class1">
+							{{question.opt1}}
+						</button>
+						&nbsp;&nbsp;&nbsp;
+						<button ng-if="question.opt2!=''" ng-click="checkans(question.opt2, question.right_answer, '2', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB20 text-center font_normal" ng-class="class2" style="max-width:46%;">
+							{{question.opt2}}
+						</button>
+					</div>
+					<!-- <div class="row no_background">
+						<button ng-if="question.opt3!=''" ng-click="checkans(question.opt3, question.right_answer, '3', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 paddingTB20 marginright20 text-center font_normal" ng-class="class3">
+							{{question.opt3}}
+						</button>
+						<button ng-if="question.opt4!=''" ng-click="checkans(question.opt4, question.right_answer, '4', $index, question._id)" ng-disabled="isdisabled" class="col br col-50 background_white text_color paddingTB20 marginleft20 text-center font_normal" ng-class="class4" style="max-width:46%;">
+							{{question.opt4}}
+						</button>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

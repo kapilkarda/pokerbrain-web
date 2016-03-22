@@ -1,0 +1,120 @@
+<ion-view view-title="Topics">
+	<!-- <ion-header class="bar header-bar background_color">
+		<button onclick="javascript:history.go(-1)" class="button button-clear icon ion-arrow-left-c text_white"></button>
+		<h1 class="title"></h1>
+	</ion-header> -->
+	
+	<ion-content scroll="false" style="background:#eaedf2 !important;">
+		<div class="row no_padding">
+			<div class="col no_padding col1">
+				<div class="row background_color">
+					<div class="col col1">
+						<div ng-if="playerdetails.pic==' '" class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;"></div>
+						<div ng-if="playerdetails.pic!=' '" class="profile-icon" style="background:url('{{playerdetails.pic}}') no-repeat center; background-size:110%;">
+						</div> 
+						<h2 class="font_normal no_margin profile-title" style="margin-top:5px !important;">{{playerdetails.name}}</h2>
+						<p class="font_light no_margin profile-dis fs-14">{{resCount}} out of {{totaleQuestion}}</p>
+						<br />
+						<p class="no_margin"><i ng-repeat="result in resultdata track by $index" class="icon ion-record fs-20" ng-class="setcolor(result.result)" style="margin:0 5px;"></i></p>
+					</div>
+					<!-- <div class="col col-50 text-right">
+						<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; float:right !important; background-size:110%; margin:0 12px 0 0 !important;">
+						</div>
+						<h2 class="font_normal no_margin profile-title" style="margin-right:70px !important; margin-top:5px !important;">Aria S</h2>
+						<p class="font_light no_margin profile-dis" style="margin-right:70px !important;">6 out of 10</p>
+						<br />
+						<p class="no_margin"><i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;</p>
+					</div> -->
+					<!-- <div class="centerNumber">
+						
+					</div> -->
+				</div>
+				<div class="card">
+					<div class="item text-center text_color font_bold item-text-wrap">	
+						<h4 class="fs-16">Your Score: </h4>
+						<br />
+						<h1 class="text_red fs-20">{{resCount}}</h1>
+					</div>
+				</div>
+				<br />
+				<br /><br />
+				<button ui-sref="nav.home" class="button button-block background_color text_white" style="width:80%; margin:0 10%;">Go to Home</button>
+			</div>
+			<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				
+			</div>
+		</div>
+
+		<!-- <div ng-show="show==$index" ng-repeat="question in questions | orderBy:'rank'" style="height: 100%;">
+			
+			<div style="width: 100%;position: absolute;top:2px;z-index:1000;height:99%;" ng-hide="showMainDiv" ng-click="doClickrotate()" > </div>
+			
+			<div class="card no_margin text-center background_color padding10" style="padding:20px 0px !important;"   >
+				<div style="position:relative;">
+					<div class="relative">
+						<img ng-src="img/position/position{{question.position}}.png" style="width: 112% !important;padding-top: 8px !important;padding-bottom:8px !important;margin-left: -6%;" />
+						<p class="text-center cards_position"><img ng-src="img/cards/{{question.card1}}.png" style="width:14.4%; max-height:150px; margin:1%;"/><img ng-src="img/cards/{{question.card2}}.png" style="width:14.4%; max-height:150px; margin:1%;"/></p>
+					</div>
+					<img ng-if="playerdetails.pic=='' || playerdetails.pic==' ' || playerdetails.pic=='undefined' || playerdetails.pic==undefined"  class="player2-profile" src="img/profilepic.jpg" style="width:11.3%;"></button>
+					<img ng-if="playerdetails.pic!=''" class="player2-profile" ng-src="{{playerdetails.pic}}" style="width:11.3%;"></button>
+				</div>
+				<p class="no_margin text-center fs-16 text_white">&nbsp;&nbsp;{{playerdetails.name}} </p>
+			</div>
+			<div class="flipbox mediaHeight" ng-class="(show==$index)? 'flipped' : 'back'">	
+				<div class="card no_background" style="margin:5px auto 0px !important;">
+					
+				</div>
+				<div class="card" style="margin:0px auto !important; padding:5% 0;">
+					<div class="item text-center fs-18 text_color font_bold item-text-wrap mediaHeightFont">	
+						You have {{question.stacksizebb}} big blinds.{{question.question}}
+					</div>
+				</div>
+			</div>
+			<div class="card no_background mediaHeight boxHeight" style="margin-bottom:0px !important;margin-top: 2px !important;">
+				<div class="row no_background" style="margin-bottom:15px;">
+					<button ng-if="question.opt1!=''" ng-click="checkans(question.opt1, question.right_answer, '1', question, question._id, $index)" class="col br col-50 paddingTB20 marginright20 text-center font_normal mediaHeightFont" ng-class="class1" style="max-width:45%;" ng-disabled="defaulthide" >
+						{{question.opt1}}
+					</button>
+					<button ng-if="question.opt2!=''" ng-click="checkans(question.opt2, question.right_answer, '2', question, question._id, $index)" class="col br col-50 paddingTB20 marginleft20 text-center font_normal mediaHeightFont" ng-class="class2" style="max-width:45%;" ng-disabled="defaulthide">
+						{{question.opt2}}
+					</button>
+				</div>
+				
+			</div>
+		</div> -->
+	</ion-content>
+	<!-- <ion-content scroll="false" style="background:#eaedf2 !important;">
+		<div class="row background_color">
+			<div class="col col-100">
+				<div ng-if="playerdetails.pic==' '" class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; background-size:110%;"></div>
+				<div ng-if="playerdetails.pic!=' '" class="profile-icon" style="background:url('{{playerdetails.pic}}') no-repeat center; background-size:110%;">
+				</div> 
+				<h2 class="font_normal no_margin profile-title" style="margin-top:5px !important;">{{playerdetails.name}}</h2>
+				<p class="font_light no_margin profile-dis fs-14">{{resCount}} out of {{totaleQuestion}}</p>
+				<br />
+				<p class="no_margin"><i ng-repeat="result in resultdata track by $index" class="icon ion-record fs-20" ng-class="setcolor(result.result)" style="margin:0 5px;"></i></p>
+			</div> -->
+			<!-- <div class="col col-50 text-right">
+				<div class="profile-icon" style="background:url('img/profilepic.jpg') no-repeat center; float:right !important; background-size:110%; margin:0 12px 0 0 !important;">
+				</div>
+				<h2 class="font_normal no_margin profile-title" style="margin-right:70px !important; margin-top:5px !important;">Aria S</h2>
+				<p class="font_light no_margin profile-dis" style="margin-right:70px !important;">6 out of 10</p>
+				<br />
+				<p class="no_margin"><i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_gray fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_green fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;<i class="icon ion-record text_red fs-10"></i>&nbsp;</p>
+			</div> -->
+			<!-- <div class="centerNumber">
+				
+			</div> -->
+		<!-- </div>
+		<div class="card">
+			<div class="item text-center text_color font_bold item-text-wrap">	
+				<h4 class="fs-16">Your Score: </h4>
+				<br />
+				<h1 class="text_red fs-20">{{resCount}}</h1>
+			</div>
+		</div>
+		<br />
+		<br /><br />
+		<button ui-sref="nav.home" class="button button-block background_color text_white" style="width:80%; margin:0 10%;">Go to Home</button>
+	</ion-content> -->
+</ion-view>

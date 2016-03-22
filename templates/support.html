@@ -1,0 +1,22 @@
+<ion-view view-title="Support">
+
+	<ion-content scroll="false">
+		<div class="row no_padding">
+			<div class="col no_padding col1">
+				<ion-content scroll="false" class="has_header col1">
+				<div class="list">
+					<a ng-click="openModalfaq()" class="item">
+						FAQ
+					</a>
+					<a ng-click="openModalemailcontact()" class="item">
+						Email Contact
+					</a>
+				</div>
+				</ion-content>
+			</div>
+			<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

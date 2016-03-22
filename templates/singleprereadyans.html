@@ -1,0 +1,93 @@
+<ion-view view-title="Topics">
+	<ion-content overflow-scroll="false" style="background:#eaedf2 !important;overflow:hidden !important;">
+		<div class="row no_padding">
+			<div class="col no_padding col4">
+				<div ng-show="show==$index" ng-repeat="question in questions | orderBy:'rank'" style="height: 100%;">
+			
+					<div style="width: 100%;position: absolute;top:2px;z-index:1000;height:99%;" ng-hide="showMainDiv" ng-click="doClickrotate()" > </div>
+					
+					<div class="card no_margin text-center background_color padding10" style="padding:20px 0px !important;"   >
+						<div style="position:relative;">
+							<div class="relative">
+								<img ng-src="img/position/position{{question.position}}.png" style="width: 112% !important;padding-top: 8px !important;padding-bottom:8px !important;margin-left: -6%;" />
+								<p class="text-center cards_position"><img ng-src="img/cards/{{question.card1}}.png" style="width:14.4%; max-height:150px; margin:1%;"/><img ng-src="img/cards/{{question.card2}}.png" style="width:14.4%; max-height:150px; margin:1%;"/></p>
+							</div>
+							<img ng-if="playerdetails.pic=='' || playerdetails.pic==' ' || playerdetails.pic=='undefined' || playerdetails.pic==undefined"  class="player2-profile" src="img/profilepic.jpg" style="width:11.3%;"></button>
+							<img ng-if="playerdetails.pic!=''" class="player2-profile" ng-src="{{playerdetails.pic}}" style="width:11.3%;"></button>
+						</div>
+						<p class="no_margin text-center fs-16 text_white">&nbsp;&nbsp;{{playerdetails.name}} </p>
+					</div>
+					<div class="flipbox mediaHeight" ng-class="(show==$index)? 'flipped' : 'back'">	
+						<div class="card no_background" style="margin:5px auto 0px !important;">
+							
+						</div>
+						<div class="card" style="margin:0px auto !important; padding:5% 0;">
+							<div class="item text-center fs-18 text_color font_bold item-text-wrap mediaHeightFont">	
+								You have {{question.stacksizebb}} big blinds.{{question.question}}
+							</div>
+						</div>
+					</div>
+					<div class="card no_background mediaHeight boxHeight" style="margin-bottom:0px !important;margin-top: 2px !important;">
+						<div class="row no_background" style="margin-bottom:15px;">
+							<button ng-if="question.opt1!=''" ng-click="checkans(question.opt1, question.right_answer, '1', question, question._id, $index)" class="col br col-50 paddingTB20 marginright20 text-center font_normal mediaHeightFont" ng-class="class1" style="max-width:45%;" ng-disabled="defaulthide" >
+								{{question.opt1}}
+							</button>
+							<button ng-if="question.opt2!=''" ng-click="checkans(question.opt2, question.right_answer, '2', question, question._id, $index)" class="col br col-50 paddingTB20 marginleft20 text-center font_normal mediaHeightFont" ng-class="class2" style="max-width:45%;" ng-disabled="defaulthide">
+								{{question.opt2}}
+							</button>
+						</div>
+						<!-- <div class="row no_background">
+							<button ng-if="question.opt3!=''" ng-click="checkans(question.opt3, question.right_answer, '3', question, question._id, $index)" class="col br col-50 paddingTB20 marginright20 text-center font_normal" ng-class="class3" style="max-width:45%;" ng-disabled="defaulthide">
+								{{question.opt3}}
+							</button>
+							<button ng-if="question.opt4!=''" ng-click="checkans(question.opt4, question.right_answer, '4', question, question._id, $index)" class="col br col-50 background_white text_color paddingTB20 marginleft20 text-center font_normal" ng-class="class4" style="max-width:45%;" ng-disabled="defaulthide">
+								{{question.opt4}}
+							</button>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+				
+			</div>
+		</div>
+
+		<!-- <div ng-show="show==$index" ng-repeat="question in questions | orderBy:'rank'" style="height: 100%;">
+			
+			<div style="width: 100%;position: absolute;top:2px;z-index:1000;height:99%;" ng-hide="showMainDiv" ng-click="doClickrotate()" > </div>
+			
+			<div class="card no_margin text-center background_color padding10" style="padding:20px 0px !important;"   >
+				<div style="position:relative;">
+					<div class="relative">
+						<img ng-src="img/position/position{{question.position}}.png" style="width: 112% !important;padding-top: 8px !important;padding-bottom:8px !important;margin-left: -6%;" />
+						<p class="text-center cards_position"><img ng-src="img/cards/{{question.card1}}.png" style="width:14.4%; max-height:150px; margin:1%;"/><img ng-src="img/cards/{{question.card2}}.png" style="width:14.4%; max-height:150px; margin:1%;"/></p>
+					</div>
+					<img ng-if="playerdetails.pic=='' || playerdetails.pic==' ' || playerdetails.pic=='undefined' || playerdetails.pic==undefined"  class="player2-profile" src="img/profilepic.jpg" style="width:11.3%;"></button>
+					<img ng-if="playerdetails.pic!=''" class="player2-profile" ng-src="{{playerdetails.pic}}" style="width:11.3%;"></button>
+				</div>
+				<p class="no_margin text-center fs-16 text_white">&nbsp;&nbsp;{{playerdetails.name}} </p>
+			</div>
+			<div class="flipbox mediaHeight" ng-class="(show==$index)? 'flipped' : 'back'">	
+				<div class="card no_background" style="margin:5px auto 0px !important;">
+					
+				</div>
+				<div class="card" style="margin:0px auto !important; padding:5% 0;">
+					<div class="item text-center fs-18 text_color font_bold item-text-wrap mediaHeightFont">	
+						You have {{question.stacksizebb}} big blinds.{{question.question}}
+					</div>
+				</div>
+			</div>
+			<div class="card no_background mediaHeight boxHeight" style="margin-bottom:0px !important;margin-top: 2px !important;">
+				<div class="row no_background" style="margin-bottom:15px;">
+					<button ng-if="question.opt1!=''" ng-click="checkans(question.opt1, question.right_answer, '1', question, question._id, $index)" class="col br col-50 paddingTB20 marginright20 text-center font_normal mediaHeightFont" ng-class="class1" style="max-width:45%;" ng-disabled="defaulthide" >
+						{{question.opt1}}
+					</button>
+					<button ng-if="question.opt2!=''" ng-click="checkans(question.opt2, question.right_answer, '2', question, question._id, $index)" class="col br col-50 paddingTB20 marginleft20 text-center font_normal mediaHeightFont" ng-class="class2" style="max-width:45%;" ng-disabled="defaulthide">
+						{{question.opt2}}
+					</button>
+				</div>
+				
+			</div>
+		</div> -->
+	</ion-content>
+</ion-view>

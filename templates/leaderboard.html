@@ -1,0 +1,111 @@
+<ion-view view-title="Leaderboard">
+    <ion-content scroll="true">
+        <div class="row no_padding">
+            <div class="col no_padding col1">
+                <ion-content scroll="false" class="has_header col1">
+                    <tab-slide-box>
+                        <div class="tsb-icons">
+                            <div class="tsb-ic-wrp font_light">
+                                <ion-scroll direction="x" class="tsb-hscroll">
+                                    <a href="javascript:;" class="font_light">DAILY</a>
+                                    <a href="javascript:;" class="font_light">WEEKLY</a>
+                                    <a href="javascript:;" class="font_light">ALL TIME</a>
+                                </ion-scroll>
+                            </div>
+                        </div>
+                        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                            <ion-slide>
+                                <ion-scroll direction="y" style="height:90% !important;">
+                                    <div class="card no_background" style="margin:0px;">
+                                        <ion-list>
+                                            <div class="list">
+                                                <a class="item item-avatar backgroundEven item-text-wrap" ng-repeat="leaderboard in leaderboards | orderBy:'-total_point' track by $index" ng-if="leaderboard.user_id!=null">
+                                                    <img ng-if="!leaderboard.user_id.avator" ng-src="img/profilepic.jpg">
+                                                    <img ng-if="leaderboard.user_id.avator" ng-src="{{leaderboard.user_id.avator}}">
+                                                    <span class="pull_left fs-24" style="color:#333 !important;top:25px !important;">
+                                                    {{$index+1}}
+                                                    </span>
+                                                    <h2 class="text_dark fs-16 leaderName">
+                                                        <span ng-if="leaderboard.user_id._id!=mainUserId" >{{leaderboard.user_id.fullname}}</span>
+                                                        <span ng-if="leaderboard.user_id._id==mainUserId" >You</span>
+                                                       <span>
+                                                            <img ng-if="leaderboard.user_id.country!=undefined || leaderboard.user_id.country=='undefined'" ng-src="img/country_flag/{{leaderboard.user_id.country}}.jpg" style="width:12%;position:relative;top:0px;"> 
+                                                        </span>
+                                                      
+                                                    </h2>
+                                                    <span class="item-note pull_right fs-26" style="top:25px !important; color:#c9e950 !important;">
+                                                    {{leaderboard.total_point}}
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </ion-list>
+                                    </div>
+                                    <br /><br />
+                                </ion-scroll>
+                            </ion-slide>
+                            <ion-slide>
+                                <ion-scroll direction="y" style="height:90% !important;">
+                                    <div class="card no_background" style="margin:0px;">
+                                        <ion-list>
+                                            <div class="list">
+                                                <a class="item item-avatar backgroundEven item-text-wrap" ng-repeat="leaderboard in leaderboards | orderBy:'-total_point' track by $index" ng-if="leaderboard.user_id!=null" style="">
+                                                    <img ng-if="!leaderboard.user_id.avator" ng-src="img/profilepic.jpg">
+                                                    <img ng-if="leaderboard.user_id.avator" ng-src="{{leaderboard.user_id.avator}}">
+                                                    <span class="pull_left fs-24" style="color:#333 !important;top:25px !important;">
+                                                    {{$index+1}}
+                                                    </span>
+                                                    <h2 class="text_dark fs-16 leaderName">
+                                                        <span ng-if="leaderboard.user_id._id!=mainUserId" >{{leaderboard.user_id.fullname}}</span>
+                                                        <span ng-if="leaderboard.user_id._id==mainUserId" >You</span>
+                                                        <span>
+                                                            <img ng-if="leaderboard.user_id.country!=undefined || leaderboard.user_id.country=='undefined'" ng-src="img/country_flag/{{leaderboard.user_id.country}}.jpg" style="width:12%;position:relative;top:0px;"> 
+                                                        </span>
+                                                    </h2>
+                                                    <span class="item-note pull_right fs-26" style="top:25px !important; color:#c9e950 !important;">
+                                                    {{leaderboard.total_point}}
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </ion-list>
+                                    </div>
+                                    <br />
+                                </ion-scroll>
+                            </ion-slide>
+                            <ion-slide>
+                                <ion-scroll direction="y" style="height:90% !important;">
+                                    <div class="card no_background" style="margin:0px;">
+                                        <ion-list>
+                                            <div class="list">
+                                                <a class="item item-avatar backgroundEven item-text-wrap" ng-repeat="leaderboard in leaderboards | orderBy:'-total_point' track by $index" ng-if="leaderboard.user_id!=null" style="">
+                                                    <img ng-if="!leaderboard.user_id.avator" ng-src="img/profilepic.jpg">
+                                                    <img ng-if="leaderboard.user_id.avator" ng-src="{{leaderboard.user_id.avator}}">
+                                                    <span class="pull_left fs-24" style="color:#333 !important;top:25px !important;">
+                                                    {{$index+1}}
+                                                    </span>
+                                                    <h2 class="text_dark fs-16 leaderName">
+                                                        <span ng-if="leaderboard.user_id._id!=mainUserId" >{{leaderboard.user_id.fullname}}</span>
+                                                        <span ng-if="leaderboard.user_id._id==mainUserId" >You</span>
+                                                        <span>
+                                                            <img ng-if="leaderboard.user_id.country!=undefined || leaderboard.user_id.country=='undefined'" ng-src="img/country_flag/{{leaderboard.user_id.country}}.jpg" style="width:12%;position:relative;top:0px;"> 
+                                                        </span>
+
+                                                    </h2>
+                                                    <span class="item-note pull_right fs-26" style="top:25px !important; color:#c9e950 !important;">
+                                                    {{leaderboard.total_point}}
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </ion-list>
+                                    </div>
+                                    <br />
+                                </ion-scroll>
+                            </ion-slide>
+                        </ion-slide-box>
+                    </tab-slide-box>
+                </ion-content>
+            </div>
+            <div class="col col-33 no_padding col2" ng-include="'templates/rightlist.html'" ng-controller="rightlistCtrl">
+                
+            </div>
+    </ion-content>
+</ion-view>

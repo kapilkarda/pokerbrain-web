@@ -1,0 +1,65 @@
+angular.module('pokerquestion.controllers', [])
+
+.controller('PokerquestionCtrl', function($scope) {
+	$scope.cards=[
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		},
+		{
+			"image":"img/card1.png"
+		}
+		
+	];
+	
+});
